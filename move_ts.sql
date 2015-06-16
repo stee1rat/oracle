@@ -6,7 +6,7 @@
 -- Notes:        1. It is impossible to move segments of LONG type, 
 --                    so you will have to export them manually and drop them.
 --               2. At the end of an execution, if no segments are left in the source tablespace, 
---                    the scripts prints the DDL of the tablespace and a command do drop it.
+--                    the script prints out the DDL of the tablespace and a command do drop it.
 
 SET serveroutput ON format wrapped
 SET linesize 1000
