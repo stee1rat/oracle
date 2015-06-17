@@ -1,12 +1,12 @@
 -- Description:  This script moves segments between tablespaces.
 --
--- Usage:        This script is supposed to be run in sqlplus as sysdba.
---               This script prompts for two values: source and destination tablespace names.
+-- Usage:        Supposed to be run in sqlplus as sysdba.
+--               Prompts for two values: source and destination tablespace names.
 --
--- Notes:        1. It is impossible to move segments of LONG type, 
---                    so you will have to export them manually and drop them.
+-- Notes:        1. It is impossible to move segments of a LONG type, 
+--                  so it is better to export them manually and drop them prior to running the script.
 --               2. At the end of an execution, if no segments are left in the source tablespace, 
---                    the script prints out the DDL of the tablespace and a command do drop it.
+--                  the script prints out the DDL of the tablespace and a command to drop it.
 
 SET serveroutput ON format wrapped
 SET linesize 1000
