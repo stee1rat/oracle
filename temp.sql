@@ -10,4 +10,4 @@ SELECT username,
 SELECT sysdate,
        (SELECT round(sum(blocks)*8192/1024/1024/1024,2) used_total FROM v$tempseg_usage) used,
        (SELECT round(sum(bytes)/1024/1024/1024 FROM dba_temp_files, 2) allocated
-  FROM dual ;
+  FROM dual;

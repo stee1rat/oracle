@@ -15,9 +15,7 @@ alter session set "_px_trace" = none;
 trcsess output=TEST1-parallel.trc module="sqlplus@DB-prod-01 (TNS V1-V3)" ahd*TEST1_PARALLEL.trc
 tkprof TEST1-parallel.trc TEST1-parallel.out sort=exeela sys=no
 
-
 -- tracing the decision to use buffer cache or direct read
 -- https://blogs.oracle.com/smartscan-deep-dive/when-bloggers-get-it-wrong-part-2
-
 alter session set events '10358 trace name context forever, level 2';
 alter session set events 'trace [NSMTIO] disk highest'; 
